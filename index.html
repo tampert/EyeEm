@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="imageApp">
+<head>
+  <meta charset="utf-8">
+  <title>EyeMe API call Analysing Images</title>
+  <meta name="description" content="EyeMe API call Analysing Images by trivago">
+  <meta name="author" content="Dirk Soentjens">
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+	  #wrapper{
+		  width: 800px;
+		  margin: 20px auto;
+		  border: 1px solid grey;
+		  display: block;
+	  }
+	  #footer{
+		  position: absolute;
+		  bottom: 0px;
+	  }
+	  #image_placeholder{
+		  width:800px;
+		  max-width:800px;
+	  }
+	  input[type="text"] {
+	       width: 100%; 
+	       box-sizing: border-box;
+	       -webkit-box-sizing:border-box;
+	       -moz-box-sizing: border-box;
+	  }
+  </style>
+</head>
+<body>
+	<div id="wrapper" ng-controller="imageController">
+		<form>
+			<input type="text" ng-model="image_src" placeholder="please fill in a image url" width="100%">
+		</form>
+		<img ng-src="{{image_src}}" id=image_placeholder>
+		<button ng-click="analyse_image()">analyse</button>
+		<pre>{{image_results | json}} 
+		</pre>
+		<!--div id="footer">
+			<p><a href="https://eyeem.3scale.net/">the EyeEm API</a></p>
+		</div-->
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>	
+<script src="js/imageApp.js"></script>
+<script src="js/imageController.js"></script>
+</body>
+</html>
