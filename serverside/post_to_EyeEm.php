@@ -12,7 +12,7 @@ curl_setopt($ch, CURLOPT_POST, 1);
 $headers = array();
 $headers[] = "Content-Type: application/json";
 $headers[] = "Accept: application/json";
-$headers[] = "Authorization: access_token"; //get it here: https://eyeem.3scale.net/docs
+$headers[] = "Authorization: Bearer medp0ncntohc0dcrh4807nodptalrplnv6717k8a";
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $result = curl_exec($ch);

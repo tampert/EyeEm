@@ -4,7 +4,7 @@
 //http://blog.ambushboardco.com/wp-content/uploads/2013/06/Chicks.jpg
 imageApp.controller('imageController', function($scope, $http){
 	console.log("init imageController ..");
-	$scope.image_src = "https://static.pexels.com/photos/24205/pexels-photo.jpg";
+	$scope.image_src = "https://i1.wp.com/www.sirnigelcogs.com/wp-content/uploads/cathamburgerspace.jpg";
 	//$scope.analyse_body = { "requests":[ { "tasks":[ { "type":"TAGS" }, { "type":"CAPTIONS" }, { "type":"AESTHETIC_SCORE" } ], "image":{ "url": $scope.image_src} } ] };
 	$scope.image_results = {};
 	$scope.analyse_image = function(){
