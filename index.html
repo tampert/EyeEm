@@ -35,12 +35,21 @@
 			<input type="text" ng-model="image_src" placeholder="please fill in a image url" width="100%">
 		</form>
 		<img ng-src="{{image_src}}" id=image_placeholder>
+		<p>
+			<label><strong>model id : {{selected_model}}</strong></label>
+						<select ng-model="selected_model">
+						<option ng-repeat="x in models" value="{{x.model}}">{{x.name}}</option>
+						</select>
+		</p>
 		<button ng-click="analyse_image()">analyse</button>
+		<p>
+			<strong>personalized_scores = {{ aesthetic_score }}</strong>
+		</p><br />
 		<pre>{{image_results | json}} 
 		</pre>
-		<!--div id="footer">
-			<p><a href="https://eyeem.3scale.net/">the EyeEm API</a></p>
-		</div-->
+		<h3>previous_links</h3>
+		<pre ng-repeat="link in previous_links track by $index"><a href="#" ng-click="set_image(link)">{{link}}</a>
+		</pre>
 	<pre>if the result is a 401 the authentication is expires. please contact: Dirk Soentjens
 	</pre>
 </div>
