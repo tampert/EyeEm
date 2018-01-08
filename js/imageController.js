@@ -11,9 +11,12 @@ imageApp.controller('imageController', function($scope, $http){
 	$scope.previous_links = [];
 	$scope.b_add_link = true;
 	$scope.models = [
-	    {model : "60ea0a8c-a8e6-11e7-a58b-069c6a5f4f08", name : "04-10-2017"},
+		{model : "a175f39a-b40d-11e7-a58b-069c6a5f4f08", name : "18-10-17"},
+	    {model : "60ea0a8c-a8e6-11e7-a58b-069c6a5f4f08", name : "04-10-17"},
 	    {model : "7a996048-9eac-11e7-911b-069c6a5f4f08", name : "21-09-17"},
-	    {model : "ea672d68-9215-11e7-afca-069c6a5f4f08", name : "28-08-17"}
+	    {model : "ea672d68-9215-11e7-afca-069c6a5f4f08", name : "28-08-17"},
+		{model : "9b6848d8-d5d5-11e7-a354-069c6a5f4f08", name : "30-11-17"},
+		{model : "1afa6494-e591-11e7-ae28-a0999b009b3b", name : "02-01-18"},
 	];
 	
 	$scope.selected_model = $scope.models[0].model;
